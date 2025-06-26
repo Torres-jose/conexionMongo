@@ -5,7 +5,8 @@ const PORT = process.env.PORT || 1000;
 
 app.use(express.json());
 
-//aqui la rustas
+const UsuarioRoutes = require('./routes/usuarioRoutes');
+app.use('/api/usuario', UsuarioRoutes);
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://locahost:${PORT}`);
 })
